@@ -6,15 +6,16 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    align-content: start;
 }
 h1 {
     font-weight: bold;
     text-align: center;
+    margin-top: 50px;
 }
 .showcase-layout {
     display: flex;
-    height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
 }
 p.header3-block {
     text-align: center;
@@ -22,37 +23,50 @@ p.header3-block {
     color: red;
     text-transform: uppercase;
 }
+.main-container-wrapper {
+    display: flex;
+    flex-direction: row;
+}
 .left-container {
     display: flex;
     flex-direction: column;
-    width: 10%;
-    margin-left: 25%;
-    background: #d2d1d1;
+    background: #C8C6C6;
     font-size: larger;
 }
 .category-block {
-    padding: 20px 5px 20px 20px;
+    padding: 20px;
     margin: 0;
     text-align: left;
     font-size: large;
     color: #3c3737;
+    font-weight: bold;
+    border-bottom: solid 1px rgba(60, 55, 55, 0.5);
 }
 div.left-container>p.category-block {
     order: var(--value);
+}
+div.left-container p.category-block:not(:active) {
+    background: #888888;
+}
+div.left-container p.category-block:not(:hover) {
+    background: #C8C6C6;
 }
 .grid-container {
     width: 600px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
     grid-template-rows: repeat(auto-fill, 200px);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
     padding-left: 5px;
     padding-right: 5px;
+    min-height: content-box;
 }
 .grid-cell {
     text-align: center;
+    height: 200px;
 }
+
 div.grid-cell:nth-child(8n+2) {
     grid-column: 2 / 4;
     grid-row: 1;
@@ -76,8 +90,38 @@ div.grid-cell:nth-child(n) img {
 p.name-container {
     display: none;
 }
+.grid-cell img {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+div.grid-cell:nth-child(8n+2)>img {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    object-fit: cover;
+    width: 400px;
+    height: 200px;
+}
+div.grid-cell:nth-child(8n+6)>img {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    object-fit: cover;
+    width: 400px;
+    height: 200px;
+}
+div.grid-cell:nth-child(8n+8)>img {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    object-fit: cover;
+    width: 600px;
+    height: 200px;
+}
 img:hover+p.name-container {
     display: block;
+    height: auto;
+    width: auto;
     position: absolute;
     background: rgba(60,55,55, 0.5);
     padding: 10px;
@@ -85,28 +129,49 @@ img:hover+p.name-container {
     margin-top: -100px;
 }
 .right-container {
-    width: 10%;
-    background: #d2d1d1;
+    background: #C8C6C6;
     color: #3c3737;
     height: max-content;
+    width: auto;
+    padding: 10px;
+}
+div.rating-container-wrapper>div.rating-block {
+    order: var(--value);
+}
+div.right-container>label {
+    margin-left: 4em;
 }
 .filter-checkbox {
     float: right;
     height: auto;
 }
 .rating-block {
-    width: 100%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-.scale-container {
+.scale-wrapper {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    padding-left: 10px;
+    height: 40px;
+    width: 180px;
+    align-items: center;
 }
 .scale-block {
-    background: white;
+    background: transparent;
+    height: 20px;
     width: 70%;
-    margin: 10px;
+}
+div.scale-wrapper p {
+    font-weight: bold;
+    padding: 5px;
+    flex-grow: 2;
+    text-align: right;
+}
+div.rating-block>p {
+    font-weight: bold;
+    width: auto;
+    margin: 0;
 }
 div.right-container label {
     padding-left: 20px;
@@ -119,7 +184,7 @@ div.right-container label {
 .high-value-scale-block {
     background: #98ff66;
     height: 100%;
-    width: 100%;
+    width: 90%;
 }
 .low-value-scale-block {
     background: #FF0000;
@@ -129,6 +194,7 @@ div.right-container label {
 .rating-container-wrapper {
     display: flex;
     flex-direction: column;
+    width: auto;
 }
 input.filter-checkbox:checked~div.rating-container-wrapper>div.rating-block {
     order: var(--rating);
@@ -137,25 +203,23 @@ input:checked~div.rating-container-wrapper {
     flex-direction: column-reverse;
 }
 footer {
-    border-top: solid 2px #3c3737;
+    border-top: solid 2px #C8C6C6;
+    background: #dddddd;
     display: flex;
     width: 100%;
-    position: fixed;
     bottom: 0;
+    margin-top: 5px;
 }
 .copyright-container {
-    background: #dddddd;
     width: 25%;
     text-align: center;
     margin-left: 10%;
     color: #3c3737;
 }
 .separator-container {
-    background: #dddddd;
     width: 30%;
 }
 .contacts-container {
-    background: #dddddd;
     width: 25%;
     text-align: center;
     color: darkblue;
