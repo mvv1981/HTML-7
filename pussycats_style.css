@@ -126,8 +126,15 @@ div.right-container label {
     height: 100%;
     width: 30%;
 }
+.rating-container-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 input.filter-checkbox:checked~div.rating-container-wrapper>div.rating-block {
     order: var(--rating);
+}
+input:checked~div.rating-container-wrapper {
+    flex-direction: column-reverse;
 }
 footer {
     border-top: solid 2px #3c3737;
