@@ -11,91 +11,93 @@
             <h1>Бабуленькины котятки</h1>
         </div>
         <div class = "showcase-layout">
-            <div class = "left-container">
-                <p class = "category-block" style = "--value:2">
-                    Британская
-                </p>
-                <p class = "category-block" style = "--value:19">
-                    Сиамская
-                </p>
-                <p class = "category-block" style = "--value:26">
-                    Шотландская вислоухая
-                </p>
-                <p class = "category-block" style = "--value:14">
-                    Манчкин
-                </p>
-            </div>
-            <div class = "grid-container">
-                <div class = "grid-cell">
-                    <img src="01_Британец_квадрат.jpeg" alt="Британец" />
-                    <p class = "grid-cell name-container">Флора 6 месяцев</p>
+            <div class = "main-container-wrapper">
+                <div class = "left-container">
+                    <p class = "category-block" style = "--value:2">
+                        Британская
+                    </p>
+                    <p class = "category-block" style = "--value:19">
+                        Сиамская
+                    </p>
+                    <p class = "category-block" style = "--value:26">
+                        Шотландская вислоухая
+                    </p>
+                    <p class = "category-block" style = "--value:14">
+                        Манчкин
+                    </p>
                 </div>
-                <div class = "grid-cell">
-                    <img src="02_Британец_широкая.jpg" alt="Британец" />
-                    <p class = "grid-cell name-container">Барни 6 лет</p>
-                </div>
-                <div class = "grid-cell">
-                    <img src="04_Сиамская_квадрат.jpg" alt="Сиамская" />
-                    <p class = "grid-cell name-container">Шарлотта 2 года</p>
-                </div>
-                <div class = "grid-cell">
-                    <img src="05_Сиамская_квадрат.jpg" alt="Сиамская" />
-                    <p class = "grid-cell name-container">Бенни 2 года</p>
-                </div>
-                <div class = "grid-cell">
-                    <img src="07_Шотландец_квадрат.jpg" alt="Шотландец" />
-                    <p class = "grid-cell name-container">Дора 4 месяца</p>
-                </div>
-                <div class = "grid-cell">
-                    <img src="08_Манчкин_щирокая.jpg" alt="Манчкин" />
-                    <p class = "grid-cell name-container">Багира 4 года</p>
-                </div>
-                <div class = "grid-cell">
-                    <img src="06_Сиамская_квадрат.jpg" alt="Сиамская" />
-                    <p class = "grid-cell name-container">Триша 5 лет</p>
-                </div>
-                <div class = "grid-cell">
-                    <img src="09_Сиамская_широкая.jpg" alt="Сиамская" />
-                    <p class = "grid-cell name-container">Фанта 1 год</p>
+                <div class = "grid-container">
+                    <div class = "grid-cell">
+                        <img src="01_Британец_квадрат.jpeg" alt="Британец" />
+                        <p class = "grid-cell name-container">Флора, 6 месяцев</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="02_Британец_широкая.jpg" alt="Британец" />
+                        <p class = "grid-cell name-container">Барни, 6 лет</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="04_Сиамская_квадрат.jpg" alt="Сиамская" />
+                        <p class = "grid-cell name-container">Шарлотта, 2 года</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="05_Сиамская_квадрат.jpg" alt="Сиамская" />
+                        <p class = "grid-cell name-container">Бенни, 2 года</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="07_Шотландец_квадрат.jpg" alt="Шотландец" />
+                        <p class = "grid-cell name-container">Дора, 4 месяца</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="08_Манчкин_щирокая.jpg" alt="Манчкин" />
+                        <p class = "grid-cell name-container">Багира, 4 года</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="06_Сиамская_квадрат.jpg" alt="Сиамская" />
+                        <p class = "grid-cell name-container">Триша, 5 лет</p>
+                    </div>
+                    <div class = "grid-cell">
+                        <img src="09_Сиамская_широкая.jpg" alt="Сиамская" />
+                        <p class = "grid-cell name-container">Фанта, 1 год</p>
+                    </div>
                 </div>
             </div>
             <div class = "right-container">
                 <p class = "header3-block">
                     Рейтинг
                 </p>
-                <label>по убыванию</label>
-                <input class="right-container filter-checkbox" type = "checkbox">
+                <input id = "sort-checkbox" class="right-container filter-checkbox" type = "checkbox">
+                <label for = "sort-checkbox">по убыванию</label>
                 <div class = "rating-container-wrapper">
-                    <div class = "right-container rating-block" style = "--rating: 5">
-                        <label>Британская</label>
-                        <div class = "scale-container">
+                    <div class = "right-container rating-block" style = "--rating: 5; --value:2">
+                        <p>Британская</p>
+                        <div class = "scale-wrapper">
                             <div class = "scale-block">
                                 <div class = "middle-value-scale-block"></div>
                             </div>
                             <p>5</p>
                         </div>
                     </div>
-                    <div class = "right-container rating-block" style = "--rating: 10">
-                        <label>Шотландская</label>
-                        <div class = "scale-container">
+                    <div class = "right-container rating-block" style = "--rating: 10; --value:26">
+                        <p>Шотландская</p>
+                        <div class = "scale-wrapper">
                             <div class = "scale-block">
                                 <div class = "high-value-scale-block"></div>
                             </div>
                             <p>10</p>
                         </div>
                     </div>
-                    <div class = "right-container rating-block" style = "--rating: 2">
-                    <label>Манчкин</label>
-                    <div class = "scale-container">
+                    <div class = "right-container rating-block" style = "--rating: 2; --value:14">
+                    <p>Манчкин</p>
+                    <div class = "scale-wrapper">
                         <div class = "scale-block">
                             <div class = "low-value-scale-block"></div>
                         </div>
                         <p>2</p>
                     </div>
                     </div>
-                    <div class = "right-container rating-block" style = "--rating: 9">
-                        <label>Сиамская</label>
-                        <div class = "scale-container">
+                    <div class = "right-container rating-block" style = "--rating: 9; --value:19">
+                        <p>Сиамская</p>
+                        <div class = "scale-wrapper">
                             <div class = "scale-block">
                                 <div class = "high-value-scale-block"></div>
                             </div>
