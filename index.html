@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Котики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Бабуленькины котятки</h1>
+    </header>
+<!-- основной бог -->
+    <div class="wrapper">
+
+            <input type="checkbox" name="nav_item" id="item1" >
+            <input type="checkbox" name="nav_item" id="item2" >
+            <input type="checkbox" name="nav_item" id="item3" >
+            <input type="checkbox" name="nav_item" id="item4" >
+
+        <nav class="nav">
+            <label for="item1">Абиссинская</label>
+            <label for="item2">Британская</label>
+            <label for="item3">Русская голубая</label>
+            <label for="item4">Сиамская</label>
+        </nav>
+
+        <main class="content">
+                        
+            <div class="siam img_cat grid1" data-title="Филя, 2 года" >
+                <img class="img" alt="Сиамская кошка" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/250px-Siam_lilacpoint.jpg">
+            </div>
+              
+            <div class="brit img_cat grid2" data-title="Мила, 1 год">
+                <img class="img" alt="Британский котенок" src="https://zooclub.ru/attach/10000/10985.jpg">
+            </div>
+            
+            <div  class="brit img_cat grid1" data-title="Карлуша, 5 лет">
+                <img class="img"alt="Британская кошка" src="https://im0-tub-ru.yandex.net/i?id=aa7540cde5b1c396d5ae3c898aadee3a-l&n=13">
+            </div>
+
+            <div  class="abis img_cat grid1" data-title="Рекс, 1.5 года">
+                <img class="img" alt="Абиссинская" src="https://im0-tub-ru.yandex.net/i?id=c7553456a89499df4017e11e8c703610-l&n=13">
+            </div>
+
+            <div  class="rus img_cat grid1" data-title="Лина, 9 месяцев">
+                <img class="img" alt="Русская голубая" src="https://im0-tub-ru.yandex.net/i?id=994305a4848757f848c13c2f75a89f2b-l&n=13">
+            </div>
+
+            <div class="abis img_cat grid2_1" data-title="Милли, 11 месяцев">
+                <img class="img" alt="Абиссинская кошка" src="https://dogcatfan.com/uploads/posts/2016-12/1480674980_abyssinian-cat-photo-7.jpg">
+            </div>
+
+            <div class="siam img_cat grid1" data-title="Красти, 3 года">
+                <img class="img" alt="Сиамская" src="https://im0-tub-ru.yandex.net/i?id=2097f8492ad534af7ece98e0f8551785-l&n=13">
+            </div> 
+
+             <div class="rus img_cat grid3" data-title="Семик, 1год">
+                <img class="img" alt="Русская голубая" src="data:image/jpeg;base64,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">
+            </div>
+            
+        </main>
+    </div>
+<!-- рейтинг -->
+    <div class="rating">
+            <h3>Рейтинг</h3>
+        
+            <input type="checkbox" id="sort" style="float: right;">
+            <label for="sort" style="float: right;"> По убыванию</label>
+            <div class="wrapper_reting">
+                <div class="sorted" style="--value:9;">
+                    Абисинская
+                    <div id="cat">            
+                        <div class="cat" data-content="9"></div>
+                        <div>9</div> 
+                    </div>             
+                </div>
+                <div class="sorted" style="--value:8;">
+                    Британская 
+                    <div id="cat">          
+                        <div class="cat" data-content="8"></div>
+                        <div>8</div> 
+                    </div>             
+                </div>
+                <div class="sorted" style="--value:10;">
+                    Русская голубая 
+                    <div id="cat">          
+                        <div class="cat" data-content="10"></div>
+                        <div>10</div> 
+                    </div>             
+                </div>
+                <div class="sorted" style="--value:4;">
+                    Сиамская 
+                    <div id="cat">          
+                        <div class="cat" data-content="4"></div>
+                        <div>4</div> 
+                    </div>             
+                </div>
+            </div>
+    </div>
+<!-- подвал -->
+    <footer class="footer">
+        <div class="adress">
+            <div>&copy;Бабуленькины котятки, 2015</div>
+            <div><address>Наш адрес: улица Котовая, д. 5</address></div>
+        </div> 
+    </footer>
+</body>
+</html>
