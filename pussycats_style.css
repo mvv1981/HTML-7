@@ -87,7 +87,7 @@ div.grid-cell:nth-child(n) img {
     max-height: 100%;
     max-width: 100%;
 }
-p.name-container {
+.grid-cell .name-container {
     display: none;
 }
 .grid-cell img {
@@ -118,7 +118,7 @@ div.grid-cell:nth-child(8n+8)>img {
     width: 600px;
     height: 200px;
 }
-img:hover+p.name-container {
+.grid-cell:hover .name-container {
     display: block;
     height: auto;
     width: auto;
