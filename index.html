@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/rate-bars.css">
   </head>
   <body>
     <header>
@@ -22,70 +23,85 @@
       </nav>
 
       <section>
-        <div class="img-wrapper">
-          <img src="./img/cat1.jpg" alt="">
+        <div class="row">
+          <div class="img-wrapper">
+            <img src="./img/cat1.jpg" alt="">
+          </div>
+
+          <div class="img-wrapper">
+            <img src="./img/cat2.jpg" alt="">
+          </div>
         </div>
 
-        <div class="img-wrapper">
-          <img src="./img/cat2.jpg" alt="">
+        <div class="row">
+          <div class="img-wrapper">
+            <img src="./img/cat3.jpg" alt="">
+          </div>
+
+          <div class="img-wrapper">
+            <img src="./img/cat4.jpg" alt="">
+          </div>
+
+          <div class="img-wrapper">
+            <img src="./img/cat5.jpg" alt="">
+          </div>
         </div>
 
-        <div class="img-wrapper">
-          <img src="./img/cat3.jpg" alt="">
+        <div class="row">
+          <div class="img-wrapper">
+            <img src="./img/cat6.jpg" alt="">
+          </div>
+
+          <div class="img-wrapper">
+            <img src="./img/cat7.jpg" alt="">
+          </div>
         </div>
 
-        <div class="img-wrapper">
-          <img src="./img/cat4.jpg" alt="">
-        </div>
-
-        <div class="img-wrapper">
-          <img src="./img/cat5.jpg" alt="">
-        </div>
-
-        <div class="img-wrapper">
-          <img src="./img/cat6.jpg" alt="">
-        </div>
-
-        <div class="img-wrapper">
-          <img src="./img/cat7.jpg" alt="">
-        </div>
-
-        <div class="img-wrapper">
-          <img src="./img/cat8.jpg" alt="">
+        <div class="row">
+          <div class="img-wrapper">
+            <img src="./img/cat8.jpg" alt="">
+          </div>
         </div>
       </section>
 
       <aside>
         <h2>Рейтинг</h2>
 
-        <label for="order">
-          по убыванию
-          <input type="checkbox" name="order">
-        </label>
+        <label for="order">по убыванию</label>
+        <input type="checkbox" name="order">
+
 
         <ul>
-          <li>
+          <li rating="9">
             <p>Абиссинская</p>
-            <div class="rate-bar"></div>
-            9
+            <div class="rating">
+              <div class="rate-bar" rating="9"></div>
+              <span>9</span>
+            </div>
           </li>
 
-          <li>
+          <li rating="8">
             <p>Британская</p>
-            <div class="rate-bar"></div>
-            8
+            <div class="rating">
+              <div class="rate-bar" rating="8"></div>
+              <span>8</span>
+            </div>
           </li>
 
-          <li>
+          <li rating="10">
             <p>Русская голубая</p>
-            <div class="rate-bar"></div>
-            10
+            <div class="rating">
+              <div class="rate-bar" rating="10"></div>
+              <span>10</span>
+            </div>
           </li>
 
-          <li>
+          <li rating="4">
             <p>Сиамская</p>
-            <div class="rate-bar"></div>
-            4
+            <div class="rating">
+              <div class="rate-bar" rating="4"></div>
+              <span>4</span>
+            </div>
           </li>
         </ul>
       </aside>

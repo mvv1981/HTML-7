@@ -1,0 +1,96 @@
+.rate-bar {
+  border: 1px solid black;
+  height: 1rem;
+
+  display: inline-block;
+}
+
+.rate-bar[rating="10"] {
+  width: 63.2%;
+  background: linear-gradient(to right, #45D17E, white);
+}
+
+.rate-bar[rating="9"] {
+  width: 56.88%;
+  background: linear-gradient(to right, #45D17E, white);
+}
+
+.rate-bar[rating="8"] {
+  width: 50.56%;
+  background: linear-gradient(to right, #FCF508, white);
+}
+
+.rate-bar[rating="7"] {
+  width: 44.24%;
+  background: linear-gradient(to right, #FCF508, white);
+}
+
+.rate-bar[rating="6"] {
+  width: 37.92%;
+  background: linear-gradient(to right, #FCAA08, white);
+}
+
+.rate-bar[rating="5"] {
+  width: 31.6%;
+  background: linear-gradient(to right, #FCAA08, white);
+}
+
+.rate-bar[rating="4"] {
+  width: 25.28%;
+  background: linear-gradient(to right, #CD1B27, white);
+}
+
+.rate-bar[rating="3"] {
+  width: 18.96%;
+  background: linear-gradient(to right, #CD1B27, white);
+}
+
+.rate-bar[rating="2"] {
+  width: 12.64%;
+  background: linear-gradient(to right, #CD1B27, white);
+}
+
+.rate-bar[rating="1"] {
+  width: 6.32%;
+  background: linear-gradient(to right, #CD1B27, white);
+}
+
+input[name="order"]:checked ~ ul li[rating="10"] {
+  order: 1
+}
+
+input[name="order"]:checked ~ ul li[rating="9"] {
+  order: 2
+}
+
+input[name="order"]:checked ~ ul li[rating="8"] {
+  order: 3
+}
+
+input[name="order"]:checked ~ ul li[rating="7"] {
+  order: 4
+}
+
+input[name="order"]:checked ~ ul li[rating="6"] {
+  order: 5
+}
+
+input[name="order"]:checked ~ ul li[rating="5"] {
+  order: 6
+}
+
+input[name="order"]:checked ~ ul li[rating="4"] {
+  order: 7
+}
+
+input[name="order"]:checked ~ ul li[rating="3"] {
+  order: 8
+}
+
+input[name="order"]:checked ~ ul li[rating="2"] {
+  order: 9
+}
+
+input[name="order"]:checked ~ ul li[rating="1"] {
+  order: 10
+}
