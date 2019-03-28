@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Котятки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+           
+            <header class="header">
+                <h1 class="header__headline">Бабуленькины котятки</h1>
+            </header>
+            
+            <main class="main">
+                
+                <!-- Навигация -->
+
+                <input class="radio" id="radio-abis" type="radio" name="cat-types">
+                <input class="radio" id="radio-brit" type="radio" name="cat-types">
+                <input class="radio" id="radio-rus" type="radio" name="cat-types">
+                <input class="radio" id="radio-siam" type="radio" name="cat-types"> 
+
+                <nav class="cat-types">
+                    <label for="radio-abis" class="cat-types__item">Абиссинская</label>
+                    <label for="radio-brit" class="cat-types__item">Британская</label>
+                    <label for="radio-rus" class="cat-types__item">Русская голубая</label>
+                    <label for="radio-siam" class="cat-types__item">Сиамская</label>
+                </nav>
+                
+                
+               <!-- Карточки с котами -->
+
+                <section class="cats-images">
+                    <div class="img img1 abis">
+                        <div class="img-lable">Кузя, 2 года</div>
+                    </div>
+                    <div class="img img2 rus">
+                        <div class="img-lable">Барсик, 1 год</div>
+                    </div>
+                    <div class="img img3 siam">
+                        <div class="img-lable">Федя, 3 года</div>
+                    </div>
+                    <div class="img img4 brit">
+                        <div class="img-lable">Муся, 2 года</div>
+                    </div>
+                    <div class="img img5 siam">
+                        <div class="img-lable">Соня, 3 года</div>
+                    </div>
+                    <div class="img img6 abis">
+                        <div class="img-lable">Маруся, 4 года</div>
+                    </div>
+                    <div class="img img7 brit">
+                        <div class="img-lable">Кузя, 2 года</div>
+                    </div>
+                    <div class="img img8 rus">
+                        <div class="img-lable">Кузя, 2 года</div>
+                    </div>
+                </section>
+                
+                
+                <!-- Рейтинг -->
+
+                <section class="score">
+                    <h3 class="score__title">Рейтинг</h3>
+                    <label for="score-checkbox" class="score__lable"> по убыванию
+                    </label>
+                    <input id="score-checkbox" type="checkbox">
+                    <section class="score__items">
+                       
+                       <figure class="score__item" style="--count:4;">
+                            <figcaption class="score__cat-type">Сиамская</figcaption>
+                            <div class="score__line" data-count="4"></div>
+                            <div class="score__count">4</div>
+                        </figure>
+                        
+                        <figure class="score__item" style="--count:10;">
+                            <figcaption class="score__cat-type">Русская голубая</figcaption>
+                            <div class="score__line" data-count="10"></div>
+                            <div class="score__count">10</div>
+                        </figure>
+                        
+                        <figure class="score__item" style="--count:8;">
+                            <figcaption class="score__cat-type">Британская</figcaption>
+                            <div class="score__line" data-count="8"></div>
+                            <div class="score__count">8</div>
+                        </figure>
+                        
+                        <figure class="score__item" style="--count:9;">
+                            <figcaption class="score__cat-type">Абиссинская</figcaption>
+                            <div class="score__line" data-count="9"></div>
+                            <div class="score__count">9</div>
+                        </figure>
+                        
+                    </section>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="copyright">&copy; OOO Бабуленькины котятки, 2015</div>
+            <address class="address"><a href="#">Наш адрес: ул. Котовая, д.5</a></address>
+        </footer>
+
+    </div>
+</body>
+
+</html>
