@@ -1,0 +1,268 @@
+body {
+    background: #e9e9e9;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Прижимаем к низу футер */
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+
+
+
+.header__headline {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Навигация */
+
+.cat-types {
+    background: #d3d3d3;
+    min-height: 100px;
+    margin-right: 10px;
+}
+
+.cat-types__item {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid rgba(165,165,165, 0.5);
+    
+}
+
+.cat-types__item:hover {
+    background: gray;
+    color: white;
+}
+
+.radio {
+    display: none;
+}
+
+
+#radio-abis:checked ~ .cats-images .abis,
+#radio-rus:checked ~ .cats-images .rus,
+#radio-siam:checked ~ .cats-images .siam,
+#radio-brit:checked ~ .cats-images .brit {
+    opacity: 1;
+}
+
+#radio-abis:checked ~ .cat-types [for="radio-abis"],
+#radio-rus:checked ~ .cat-types [for="radio-rus"],
+#radio-siam:checked ~ .cat-types [for="radio-siam"],
+#radio-brit:checked ~ .cat-types [for="radio-brit"] {
+    background-color: cadetblue;
+}
+
+
+/* Карточки с котами */
+
+.cats-images {
+    display: grid;
+    grid-template-areas:
+      "img1 img2 img2"
+      "img3 img4 img5"
+      "img6 img6 img7"
+      "img8 img8 img8";
+
+    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5vw;
+    width: 350px;
+    margin-right: 10px; 
+}
+
+
+.img {
+    min-height: 100px;
+    background: white;
+    opacity: 0.5;
+    position: relative;
+}
+
+.img-lable {
+    position: absolute;
+    bottom: 10px;
+    min-width: 60px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 70%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.img:hover .img-lable {
+    display: block;
+}
+
+.img:hover {
+    opacity: 1;
+}
+
+
+.img1 {
+    grid-area: img1;
+    background: url('images/cat1.jpg') no-repeat;
+    background-size: cover;
+    
+}
+.img2 {
+    grid-area: img2;
+    background: url('images/cat2.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 20%;
+}
+.img3 {
+    grid-area: img3;
+    background: url('images/cat3.jpg') no-repeat;
+    background-size: cover;
+}
+.img4 {
+    grid-area: img4;
+    background: url('images/cat4.jpg') no-repeat;
+    background-size: cover;
+}
+.img5 {
+    grid-area: img5;
+    background: url('images/cat5.jpg') no-repeat;
+    background-size: cover;
+}
+.img6 {
+    grid-area: img6;
+    background: url('images/cat6.jpg') no-repeat;
+    background-size: cover;
+}
+.img7 {
+    grid-area: img7;
+    background: url('images/cat7.jpg') no-repeat;
+    background-size: cover;
+}
+.img8 {
+    grid-area: img8;
+    background: url('images/cat8.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+/* Рейтинг */
+
+.score {
+    background: #d3d3d3;
+    align-self: flex-start;
+    width: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.score__title {
+    margin: 10px;
+    margin-bottom: 5px;
+    color: darkred;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#score-checkbox {
+    float: right;
+    margin-right: 15px;
+}
+
+.score__lable {
+    font-size: 80%;
+}
+
+.score__cat-type {
+    margin-bottom: 10px;
+}
+
+.score__items {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 15px;
+    
+}
+
+
+.score__item {
+    margin-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.score__line {
+    width: 110px;
+    height: 15px;
+    background: pink;
+    
+}
+
+.score__count {
+    font-weight: bold;
+}
+
+#score-checkbox:checked ~ .score__items .score__item {
+    order: var(--count);
+}
+
+[data-count="9"], 
+[data-count="10"] {
+    background: linear-gradient(to right, green, white);
+}
+
+[data-count="8"] {
+    background: linear-gradient(to right, yellow, white);
+    width: 90px;
+}
+
+[data-count="4"] {
+    background: linear-gradient(to right, red, white);
+    width: 80px;
+}
+
+
+
+.footer {
+    background: #d3d3d3;
+    margin-top: 15px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(165,165,165, 0.4);
+}
+
+.address a {
+    text-decoration: none;
+    font-style: normal;
+}
+
+
+
+
