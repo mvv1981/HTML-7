@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/rate-bars.css">
+    <link rel="stylesheet" href="./css/filter.css">
   </head>
   <body>
     <header>
@@ -15,51 +16,64 @@
     </header>
 
     <main>
+      <input type="checkbox" name="cat-type" value="abyss">
+      <input type="checkbox" name="cat-type" value="brit">
+      <input type="checkbox" name="cat-type" value="russ">
+      <input type="checkbox" name="cat-type" value="siam">
+
       <nav>
-        <p>Абиссинская</p>
-        <p>Британская</p>
-        <p>Русская голубая</p>
-        <p>Сиамская</p>
+        <p cat-type="abyss">Абиссинская</p>
+        <p cat-type="brit">Британская</p>
+        <p cat-type="russ">Русская голубая</p>
+        <p cat-type="siam">Сиамская</p>
       </nav>
 
       <section>
         <div class="row">
-          <div class="img-wrapper">
-            <img src="./img/cat1.jpg" alt="">
+          <div class="img-wrapper" cat-type="siam">
+            <img src="./img/cat1.jpg" alt="Гоша">
+            <p class="cat-name">Гоша, 4 года</p>
           </div>
 
-          <div class="img-wrapper">
-            <img src="./img/cat2.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="img-wrapper">
-            <img src="./img/cat3.jpg" alt="">
-          </div>
-
-          <div class="img-wrapper">
-            <img src="./img/cat4.jpg" alt="">
-          </div>
-
-          <div class="img-wrapper">
-            <img src="./img/cat5.jpg" alt="">
+          <div class="img-wrapper" cat-type="brit">
+            <img src="./img/cat2.jpg" alt="Вася">
+            <p class="cat-name">Вася, 5 лет</p>
           </div>
         </div>
 
         <div class="row">
-          <div class="img-wrapper">
-            <img src="./img/cat6.jpg" alt="">
+          <div class="img-wrapper" cat-type="brit">
+            <img src="./img/cat3.jpg" alt="Саня">
+            <p class="cat-name">Саня, 6 месяцев</p>
           </div>
 
-          <div class="img-wrapper">
-            <img src="./img/cat7.jpg" alt="">
+          <div class="img-wrapper" cat-type="brit">
+            <img src="./img/cat4.jpg" alt="Равиль">
+            <p class="cat-name">Равиль, 9 месяцев</p>
+          </div>
+
+          <div class="img-wrapper" cat-type="russ">
+            <img src="./img/cat5.jpg" alt="Петя">
+            <p class="cat-name">Петя, 1 год</p>
           </div>
         </div>
 
         <div class="row">
-          <div class="img-wrapper">
-            <img src="./img/cat8.jpg" alt="">
+          <div class="img-wrapper" cat-type="siam">
+            <img src="./img/cat6.jpg" alt="Кеша">
+            <p class="cat-name">Кеша, 3 года</p>
+          </div>
+
+          <div class="img-wrapper" cat-type="siam">
+            <img src="./img/cat7.jpg" alt="Том">
+            <p class="cat-name">Том, 10 лет</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="img-wrapper" cat-type="abyss">
+            <img src="./img/cat8.jpg" alt="Феликс">
+            <p class="cat-name">Феликс, 2 года</p>
           </div>
         </div>
       </section>
@@ -69,7 +83,6 @@
 
         <label for="order">по убыванию</label>
         <input type="checkbox" name="order">
-
 
         <ul>
           <li rating="9">
@@ -108,8 +121,8 @@
     </main>
 
     <footer>
-      <span>&copy; ООО Бабуленькины котятки, 2016</span>
-      <span>Наш адрес: <address>улица Котовая, д. 5</address></span>
+      <p>&copy; ООО Бабуленькины котятки, 2016</p>
+      <p>Наш адрес: улица Котовая, д. 5</p>
     </footer>
   </body>
 </html>

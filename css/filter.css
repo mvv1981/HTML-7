@@ -1,0 +1,56 @@
+input[name="cat-type"] {
+  position: absolute;
+  opacity: 0;
+  width: 15%;
+  height: 2.9rem;
+
+  cursor: pointer;
+}
+
+input[value="abyss"]:checked ~ nav p[cat-type="abyss"] {
+  background-color: #444;
+  color: white;
+}
+
+input[value="abyss"]:checked ~ section .img-wrapper[cat-type="abyss"] {
+  opacity: 0.5;
+}
+
+input[value="brit"] {
+  top: 3rem;
+}
+
+input[value="brit"]:checked ~ nav p[cat-type="brit"] {
+  background-color: #444;
+  color: white;
+}
+
+input[value="brit"]:checked ~ section .img-wrapper[cat-type="brit"] {
+  opacity: 0.5;
+}
+
+input[value="russ"] {
+  top: 6rem;
+}
+
+input[value="russ"]:checked ~ nav p[cat-type="russ"] {
+  background-color: #444;
+  color: white;
+}
+
+input[value="russ"]:checked ~ section .img-wrapper[cat-type="russ"] {
+  opacity: 0.5;
+}
+
+input[value="siam"] {
+  top: 9rem;
+}
+
+input[value="siam"]:checked ~ nav p[cat-type="siam"] {
+  background-color: #444;
+  color: white;
+}
+
+input[value="siam"]:checked ~ section .img-wrapper[cat-type="siam"] {
+  opacity: 0.5;
+}
