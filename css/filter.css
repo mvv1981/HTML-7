@@ -12,7 +12,7 @@ input[value="abyss"]:checked ~ nav p[cat-type="abyss"] {
   color: white;
 }
 
-input[value="abyss"]:checked ~ section .img-wrapper[cat-type="abyss"] {
+input[value="abyss"]:checked ~ section .img-wrapper[cat-type="abyss"] img {
   opacity: 0.5;
 }
 
@@ -25,7 +25,7 @@ input[value="brit"]:checked ~ nav p[cat-type="brit"] {
   color: white;
 }
 
-input[value="brit"]:checked ~ section .img-wrapper[cat-type="brit"] {
+input[value="brit"]:checked ~ section .img-wrapper[cat-type="brit"] img {
   opacity: 0.5;
 }
 
@@ -38,7 +38,7 @@ input[value="russ"]:checked ~ nav p[cat-type="russ"] {
   color: white;
 }
 
-input[value="russ"]:checked ~ section .img-wrapper[cat-type="russ"] {
+input[value="russ"]:checked ~ section .img-wrapper[cat-type="russ"] img {
   opacity: 0.5;
 }
 
@@ -51,6 +51,6 @@ input[value="siam"]:checked ~ nav p[cat-type="siam"] {
   color: white;
 }
 
-input[value="siam"]:checked ~ section .img-wrapper[cat-type="siam"] {
+input[value="siam"]:checked ~ section .img-wrapper[cat-type="siam"] img {
   opacity: 0.5;
 }
