@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Котики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="header">
+        <h1>Бабуленькины котятки</h1>
+    </header>
+    
+    <div class="wrapper">
+
+            <input type="checkbox" name="nav_item" id="item1" >
+            <input type="checkbox" name="nav_item" id="item2" >
+            <input type="checkbox" name="nav_item" id="item3" >
+            <input type="checkbox" name="nav_item" id="item4" >
+
+        <nav class="nav">
+            <label for="item1">Абиссинская</label>
+            <label for="item2">Британская</label>
+            <label for="item3">Русская голубая</label>
+            <label for="item4">Сиамская</label>
+        </nav>
+
+        <main class="content">
+
+            <div class="siam img_cat grid1" data-title="Барсик, 2 года" >
+                <img class="img" alt="Сиамская кошка" src="images/siam1.jpg">
+            </div>
+
+            <div class="brit img_cat grid2" data-title="Марсик, 1 год">
+                <img class="img" alt="Британский котенок" src="images/brit1.jpg">
+            </div>
+
+            <div  class="brit img_cat grid1" data-title="Ушастик, 5 лет">
+                <img class="img"alt="Британская кошка" src="images/brit2.jpg">
+            </div>
+
+            <div  class="abis img_cat grid1" data-title="Ластик, 1.5 года">
+                <img class="img" alt="Абиссинская" src="images/abis1.jpg">
+            </div>
+
+            <div  class="rus img_cat grid1" data-title="Пушистик, 9 месяцев">
+                <img class="img" alt="Русская голубая" src="images/rus1.jpg">
+            </div>
+
+            <div class="abis img_cat grid2_1" data-title="Головастик, 11 месяцев">
+                <img class="img" alt="Абиссинская кошка" src="images/abis2.jpg">
+            </div>
+
+            <div class="siam img_cat grid1" data-title="Мордастик, 3 года">
+                <img class="img" alt="Сиамская" src="images/siam2.jpg">
+            </div> 
+
+             <div class="rus img_cat grid3" data-title="Жопастик, 1год">
+                <img class="img" alt="Русская голубая" src="images/rus2.jpg">
+            </div>
+
+        </main>
+    </div>
+
+    <div class="rating">
+            <h3>Рейтинг</h3>
+
+            <input type="checkbox" id="sort" style="float: right;">
+            <label for="sort" style="float: right;"> По убыванию</label>
+            <div class="wrapper_reting">
+                <div class="sorted" style="--value:9;">
+                    Абисинская
+                    <div id="cat">            
+                        <div class="cat" data-content="9"></div>
+                        <div>9</div> 
+                    </div>             
+                </div>
+                <div class="sorted" style="--value:8;">
+                    Британская 
+                    <div id="cat">          
+                        <div class="cat" data-content="8"></div>
+                        <div>8</div> 
+                    </div>             
+                </div>
+                <div class="sorted" style="--value:10;">
+                    Русская голубая 
+                    <div id="cat">          
+                        <div class="cat" data-content="10"></div>
+                        <div>10</div> 
+                    </div>             
+                </div>
+                <div class="sorted" style="--value:4;">
+                    Сиамская 
+                    <div id="cat">          
+                        <div class="cat" data-content="4"></div>
+                        <div>4</div> 
+                    </div>             
+                </div>
+            </div>
+    </div>
+
+    <footer class="footer">
+        <div class="adress">
+            <div>&copy;Бабуленькины котятки, 2015</div>
+            <div><address>Наш адрес: улица Котовая, д. 5</address></div>
+        </div> 
+    </footer>
+    
+</body>
+</html>
