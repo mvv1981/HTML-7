@@ -1,0 +1,233 @@
+body {
+    display: grid;
+    grid-template-areas: "header header" "wrapper rating" "footer footer";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.2fr;
+    grid-gap: 5px;
+    margin: 0;
+    background: #DCDCDC;
+    height: 100vh;
+}
+
+/* Шапка */
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Marck Script', cursive;
+    font-size: 3em;
+    margin-block-start: 0.4em;
+}
+
+/* основнй блог*/
+
+.wrapper {
+    grid-area: wrapper;
+    display: grid;
+    grid-template-areas: "nav content" "nav content" "nav content" "nav content";
+    grid-template-columns: 15% 1fr;
+    grid-gap: 10px;
+}
+
+/* Рейтинг */
+
+.rating {
+    grid-area: rating;
+    background: #D3D3D3;
+    margin-right: 20px;
+    align-self: baseline;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+.wrapper_reting {
+    display: flex;
+    flex-direction: column-reverse;
+    clear: both;
+}
+/* сортировка рейтинга */
+#sort:not(:checked)~.wrapper_reting {
+    display: flex;
+    flex-direction: column;
+}
+
+#sort:checked~.wrapper_reting>.sorted {
+    order: var(--value);
+}
+
+#cat {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* изминение цвета рейтинга */
+.cat[data-content="9"], .cat[data-content="10"] {
+    background: linear-gradient(to right, green, white);
+    width: 90%;
+    height: 10px;
+    margin: auto 0;
+}
+
+.cat[data-content="8"] {
+    background: linear-gradient(to right, #FFFF00, white);
+    width: 60%;
+    height: 10px;
+    margin: auto 0;
+}
+
+.cat[data-content="4"] {
+    background: linear-gradient(to right, red, white);
+    width: 40%;
+    height: 10px;
+    margin: auto 0;
+}
+
+/* подвал */
+
+.footer {
+    grid-area: footer;
+    border: 1px solid Silver;
+    padding: 5px;
+}
+
+.adress {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+/* навигация */
+
+.nav {
+    grid-area: nav;
+    grid-area: nav;
+    background: #D3D3D3;
+    margin-left: 20px;
+    overflow: auto;
+    min-height: calc(100vh - 160px);
+}
+
+/* разбиение контента по гридам */
+
+.content {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+.grid1,.grid2,.grid3 { height: 25vw }
+
+.grid1 {
+    grid-column: 1, 2, 3,4;
+}
+
+.grid2 {
+    grid-column: 2 / 4;
+}
+
+.grid2_1 {
+    grid-column: 1/3;
+}
+
+.grid3 {
+    grid-column: 1 / 4;
+}
+
+.img_cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* подгонка размера картинок */
+.img {
+    position: absolute;
+    max-width: none;
+    min-width: auto;
+    min-height: auto;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+/* настройка меню */
+input[name="nav_item"] {
+    display: none;
+}
+
+/* стиль label */
+nav > label {
+    display: block;
+    border-bottom: 1px solid #A9A9A9;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+/* изменение фона label */
+input#item1:checked~nav>label[for="item1"] {
+    background: darkgrey;
+}
+
+input#item2:checked~nav>label[for="item2"] {
+    background: darkgrey;
+}
+
+input#item3:checked~nav>label[for="item3"] {
+    background: darkgrey;
+}
+
+input#item4:checked~nav>label[for="item4"] {
+    background: darkgrey;
+}
+
+/* изменение картинок */
+input[id^="item"]:checked ~ main > div {
+    opacity: 0.1;
+}
+
+input#item1:checked ~ main > div.abis {
+    opacity: 1;
+}
+
+input#item2:checked ~ main > div.brit {
+    opacity: 1;
+}
+
+input#item3:checked ~ main > div.rus {
+    opacity: 1;
+}
+
+input#item4:checked ~ main > div.siam {
+    opacity: 1;
+}
+
+/* плашка */
+.img_cat {
+    display: inline-block;
+    position: relative;
+}
+.img_cat:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 5px;
+    bottom: 20px;
+    z-index: 1;
+    background: rgba(109, 109, 110, 0.6);
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 5px 10px;
+} 
